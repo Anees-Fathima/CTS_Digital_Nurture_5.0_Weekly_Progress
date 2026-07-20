@@ -1,0 +1,35 @@
+@if (isLoading) {
+
+  <p>Loading courses...</p>
+
+} @else {
+
+  @if (courses.length > 0) {
+
+    @for (c of courses; track c.id) {
+
+        <app-course-card
+  appHighlight="lightblue"
+  [course]="c"
+  [selectedCourseId]="selectedCourseId"
+  (enrollRequested)="onEnroll($event)">
+</app-course-card>
+
+    }
+
+  } @else {
+
+    <p>No courses available.</p>
+
+  }
+
+}
+
+@if (selectedCourseId !== null) {
+
+  <p>
+    Selected course ID:
+    {{ selectedCourseId }}
+  </p>
+
+}
