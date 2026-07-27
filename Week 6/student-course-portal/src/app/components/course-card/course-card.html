@@ -1,0 +1,81 @@
+<ng-container *ngIf="enrolledIds$ | async as enrolledIds">
+
+<div
+  appHighlight="yellow"
+  [ngClass]="{
+    'enrolled-card': enrolledIds.includes(course.id),
+
+    'card--full':
+    !enrolledIds.includes(course.id) && course.credits >= 4,
+
+    'expanded': isExpanded
+  }"
+  [ngStyle]="{'border-left': '5px solid ' + borderColor}"
+  (click)="goToCourse()"
+>
+
+  <div class="card-content">
+
+    <h3>{{ course.name }}</h3>
+
+    <p>ID: {{ course.id }}</p>
+
+    <p>Code: {{ course.code }}</p>
+
+    <p>
+      Credits: {{ course.credits }}
+    </p>
+
+
+    <div [ngSwitch]="course.gradeStatus">
+
+      <span
+        *ngSwitchCase="'passed'"
+        class="badge-passed">
+        Passed
+      </span>
+
+      <span
+        *ngSwitchCase="'failed'"
+        class="badge-failed">
+        Failed
+      </span>
+
+      <span
+        *ngSwitchCase="'pending'"
+        class="badge-pending">
+        Pending
+      </span>
+
+    </div>
+
+
+    <button
+      (click)="
+        toggleEnrollment(
+          course.id,
+          enrolledIds.includes(course.id)
+        );
+        $event.stopPropagation()
+      "
+    >
+      {{
+        enrolledIds.includes(course.id)
+        ? 'Unenroll'
+        : 'Enroll'
+      }}
+    </button>
+
+
+    <button
+      (click)="toggleDetails(); $event.stopPropagation()"
+    >
+      Show Details
+    </button>
+
+
+  </div>
+
+</div>
+
+</ng-container>

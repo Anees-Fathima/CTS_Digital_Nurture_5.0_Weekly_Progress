@@ -1,0 +1,15 @@
+.ng-invalid.ng-touched {
+  border: 2px solid red;
+}
+
+.ng-valid.ng-touched {
+  border: 2px solid green;
+}
+
+span {
+  color: red;
+}
+
+button {
+  cursor: pointer;
+}

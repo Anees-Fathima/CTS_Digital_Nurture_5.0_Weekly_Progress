@@ -1,0 +1,45 @@
+
+.badge-passed,
+.badge-failed,
+.badge-pending {
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 8px;      /* space above badge */
+  margin-bottom: 12px;  /* space below badge */
+}
+
+.badge-passed {
+  background-color: green;
+}
+
+.badge-failed {
+  background-color: red;
+}
+
+.badge-pending {
+  background-color: gray;
+}
+
+.card-content {
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.enrolled-card {
+  background-color: lightgreen !important;
+  outline: 2px solid green;
+}
+
+.card--full {
+  background-color: aliceblue;
+}
+
+.expanded {
+  min-height: 250px;
+}

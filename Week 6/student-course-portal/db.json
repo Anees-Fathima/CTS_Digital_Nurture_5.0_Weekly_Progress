@@ -1,0 +1,59 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "Angular 20",
+      "code": "ANG101",
+      "credits": 4,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 2,
+      "name": "Java",
+      "code": "JAVA101",
+      "credits": 3,
+      "gradeStatus": "failed"
+    },
+    {
+      "id": 4,
+      "name": "MySQL",
+      "code": "DB101",
+      "credits": 3,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": 5,
+      "name": "Python",
+      "code": "PY101",
+      "credits": 4,
+      "gradeStatus": "pending"
+    },
+    {
+      "name": "React",
+      "code": "RE101",
+      "credits": 4,
+      "gradeStatus": "pending",
+      "id": 6
+    },
+    {
+    "id": 10,
+    "name": "Dummy",
+    "code": "DM101",
+    "credits": 0,
+    "gradeStatus": "pending"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Anees",
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "name": "Rahul",
+      "courseId": 1
+    }
+  ],
+  "enrollments": []
+}
